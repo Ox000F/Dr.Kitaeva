@@ -8,16 +8,16 @@ import '@vue/runtime-core'
 export {}
 
 declare module '@vue/runtime-core' {
-  export interface GlobalComponents {
-    ElCol: typeof import('element-plus/es')['ElCol']
-    ElContainer: typeof import('element-plus/es')['ElContainer']
-    ElHeader: typeof import('element-plus/es')['ElHeader']
-    ElInput: typeof import('element-plus/es')['ElInput']
-    ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
-    ElMain: typeof import('element-plus/es')['ElMain']
-    ElOption: typeof import('element-plus/es')['ElOption']
-    ElRow: typeof import('element-plus/es')['ElRow']
-    ElSelect: typeof import('element-plus/es')['ElSelect']
-    ElText: typeof import('element-plus/es')['ElText']
-  }
+	export interface GlobalComponents {
+		ElCol: typeof import('element-plus/es')['ElCol']
+		ElContainer: typeof import('element-plus/es')['ElContainer']
+		ElHeader: typeof import('element-plus/es')['ElHeader']
+		ElInput: typeof import('element-plus/es')['ElInput']
+		ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
+		ElMain: typeof import('element-plus/es')['ElMain']
+		ElOption: typeof import('element-plus/es')['ElOption']
+		ElRow: typeof import('element-plus/es')['ElRow']
+		ElSelect: typeof import('element-plus/es')['ElSelect']
+		ElText: typeof import('element-plus/es')['ElText']
+	}
 }
