@@ -236,7 +236,7 @@ const result = computed(() => risk1.value + risk2.value)
 			<p>Специфические фактор риска: {{risk2}}</p>
 			<p>Суммарный фактор риска: {{result}}</p>
 			<p v-if="result <= 16">Риск минимальный.</p>
-			<p v-if="result > 16 && result <= 23">Hиск средний развития остеопороза.</p>
+			<p v-if="result > 16 && result <= 23">Средний риск развития остеопороза.</p>
 			<p v-if="result > 23">Высокий риск остеопороза.</p>
 		</article>
 	</section>
