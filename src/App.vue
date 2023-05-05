@@ -50,12 +50,12 @@ const risk1 = computed(() => {
 })
 
 const risk2 = computed(() => {
-	let mul = risk1.value
+	let mul = 1
 	if(groups.value.length) mul *= groups.value.reduce((total, value) => { return total * options[value].value }, 1) 
 	return mul * steroids.value * transplant.value * necrose.value
 })
 
-const result = computed(() => risk1.value + risk2.value)
+const result = computed(() => risk1.value * risk2.value)
 
 </script>
 
