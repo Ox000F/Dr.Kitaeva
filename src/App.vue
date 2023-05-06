@@ -32,11 +32,12 @@ function getAgeWeight(age : number) : number
 	return 2
 }
 
-function getHeightWeight(height : number, weight : number) : number
+function getHeightWeight(height_cm : number, weight_kg : number) : number
 {
-	if(height == 0) return 0
+	const height_m = height_cm / 100
+	if(height_m == 0) return 0
 
-	const k = weight / height * 100
+	const k = weight_kg / (height_m * height_m)
 	if(k < 18.5) return 3
 	if(k < 25) return 1
 	if(k < 30) return 2
@@ -233,7 +234,7 @@ const result = computed(() => risk1.value * risk2.value)
 		</article>
 		<article>
 			<p>Общий фактор риска: {{risk1}}</p>
-			<p>Специфические фактор риска: {{risk2}}</p>
+			<p>Специфический фактор риска: {{risk2}}</p>
 			<p>Суммарный фактор риска: {{result}}</p>
 			<p v-if="result <= 16">Риск минимальный.</p>
 			<p v-if="result > 16 && result <= 23">Средний риск развития остеопороза.</p>
